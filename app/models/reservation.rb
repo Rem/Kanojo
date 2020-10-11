@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
   belongs_to :girlfriend
   belongs_to :user
-  belongs_to :location
+  has_many :locations through: :girlfriend
 end
