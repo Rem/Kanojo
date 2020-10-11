@@ -1,0 +1,2 @@
+class Girlfriend < ApplicationRecord
+end
