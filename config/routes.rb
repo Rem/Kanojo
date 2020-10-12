@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'session/welcome' AS '/welcome'
+
+  root '/welcome'
+
+  get 'session/user-login'
+  get 'session/girlfriend-login'
   resources :reviews
   resources :reservations
   resources :locations
