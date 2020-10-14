@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  get 'session/welcome' AS '/welcome'
+  get '/' => 'session#welcome'
 
-  root '/welcome'
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
 
-  get 'session/user-login'
-  get 'session/girlfriend-login'
+  get '/signup/user' => 'users#new'
+  post '/signup/user' => 'users#create'
+
+  get '/signup/girlfriend' => 'girlfriend#new'
+  post '/signup/girlfriend' => 'girlfriend#create'
+
   resources :reviews
   resources :reservations
   resources :locations
