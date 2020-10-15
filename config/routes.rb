@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/signup/user' => 'users#new'
   post '/signup/user' => 'users#create'
 
-  get '/signup/girlfriend' => 'girlfriend#new'
-  post '/signup/girlfriend' => 'girlfriend#create'
+  get '/signup/girlfriend' => 'girlfriends#new'
+  post '/signup/girlfriend' => 'girlfriends#create'
 
   resources :reviews
   resources :reservations
