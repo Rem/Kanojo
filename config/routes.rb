@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/signup/girlfriend' => 'girlfriends#new'
   post '/signup/girlfriend' => 'girlfriends#create'
 
+  delete '/logout' => 'session#destroy'
+
   resources :reviews
   resources :reservations
   resources :locations
